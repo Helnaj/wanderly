@@ -1,0 +1,1175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Destination | Wanderly</title>
+
+    <meta
+        name="description"
+        content="Explore amazing destinations with Wanderly."
+    >
+
+    <!-- Google Fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Font Awesome -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <!-- Tailwind generated CSS -->
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body class="bg-[#f7faf8] text-wanderly-900">
+
+
+<!-- ==========================================
+     NAVBAR
+========================================== -->
+
+<header
+    id="mainHeader"
+    class="fixed left-0 top-0 z-[9999] w-full border-b border-gray-100 bg-white/95 py-4 shadow-sm backdrop-blur-md"
+>
+
+    <div class="container-wanderly flex items-center justify-between">
+
+
+        <!-- LOGO -->
+
+        <a
+            href="index.html"
+            class="flex items-center gap-2 text-xl font-bold"
+        >
+
+            <span
+                class="grid h-9 w-9 place-items-center rounded-full bg-wanderly-500 text-white"
+            >
+
+                <i class="fa-solid fa-paper-plane"></i>
+
+            </span>
+
+            <span>
+                Wanderly
+            </span>
+
+        </a>
+
+
+        <!-- DESKTOP NAV -->
+
+        <nav class="hidden items-center gap-8 md:flex">
+
+            <a
+                href="index.html#home"
+                class="nav-link"
+            >
+                Home
+            </a>
+
+            <a
+                href="index.html#destinations"
+                class="nav-link active"
+            >
+                Destinations
+            </a>
+
+            <a
+                href="index.html#packages"
+                class="nav-link"
+            >
+                Packages
+            </a>
+
+            <a
+                href="index.html#about"
+                class="nav-link"
+            >
+                About
+            </a>
+
+            <a
+                href="index.html#contact"
+                class="nav-link"
+            >
+                Contact
+            </a>
+
+        </nav>
+
+
+        <!-- PLAN BUTTON -->
+
+        <a
+            href="index.html#plan"
+            class="primary-btn hidden px-5 py-2.5 md:inline-flex"
+        >
+            Plan Your Trip
+        </a>
+
+
+        <!-- MOBILE BUTTON -->
+
+        <button
+            id="menuButton"
+            type="button"
+            aria-label="Open navigation"
+            class="grid h-10 w-10 place-items-center rounded-lg border border-gray-200 text-wanderly-900 md:hidden"
+        >
+
+            <i class="fa-solid fa-bars"></i>
+
+        </button>
+
+    </div>
+
+
+    <!-- MOBILE MENU -->
+
+    <div
+        id="mobileMenu"
+        class="mobile-menu mt-4 border-t border-gray-100 bg-white md:hidden"
+    >
+
+        <div class="container-wanderly flex flex-col gap-1 py-5">
+
+            <a
+                href="index.html#home"
+                class="rounded-lg px-4 py-3 font-semibold hover:bg-wanderly-50"
+            >
+                Home
+            </a>
+
+            <a
+                href="index.html#destinations"
+                class="rounded-lg px-4 py-3 font-semibold hover:bg-wanderly-50"
+            >
+                Destinations
+            </a>
+
+            <a
+                href="index.html#packages"
+                class="rounded-lg px-4 py-3 font-semibold hover:bg-wanderly-50"
+            >
+                Packages
+            </a>
+
+            <a
+                href="index.html#about"
+                class="rounded-lg px-4 py-3 font-semibold hover:bg-wanderly-50"
+            >
+                About
+            </a>
+
+            <a
+                href="index.html#contact"
+                class="rounded-lg px-4 py-3 font-semibold hover:bg-wanderly-50"
+            >
+                Contact
+            </a>
+
+            <a
+                href="index.html#plan"
+                class="primary-btn mt-2"
+            >
+                Plan Your Trip
+            </a>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+
+<!-- ==========================================
+     DESTINATION HERO
+========================================== -->
+
+<main>
+
+<section
+    id="destinationHero"
+    class="relative flex min-h-[75vh] items-end overflow-hidden"
+>
+
+    <!-- BACKGROUND -->
+
+    <div
+        id="heroImage"
+        class="absolute inset-0 bg-cover bg-center"
+    ></div>
+
+
+    <!-- OVERLAY -->
+
+    <div
+        class="absolute inset-0 bg-gradient-to-t from-wanderly-900 via-wanderly-900/50 to-transparent"
+    ></div>
+
+
+    <!-- HERO CONTENT -->
+
+    <div
+        class="container-wanderly relative z-10 pb-16 pt-40 text-white"
+    >
+
+        <a
+            href="index.html#destinations"
+            class="mb-6 inline-flex items-center gap-2 text-sm font-semibold text-white/80 transition hover:text-white"
+        >
+
+            <i class="fa-solid fa-arrow-left"></i>
+
+            Back to destinations
+
+        </a>
+
+
+        <div class="max-w-3xl">
+
+            <span
+                id="heroCountry"
+                class="mb-3 inline-block text-sm font-bold uppercase tracking-[2px] text-wanderly-200"
+            >
+                Destination
+            </span>
+
+
+            <h1
+                id="heroTitle"
+                class="text-5xl font-bold sm:text-7xl"
+            >
+                Explore
+            </h1>
+
+
+            <p
+                id="heroDescription"
+                class="mt-5 max-w-2xl text-base leading-7 text-white/75 sm:text-lg"
+            >
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==========================================
+     QUICK INFO
+========================================== -->
+
+<section class="border-b border-gray-200 bg-white">
+
+    <div
+        class="container-wanderly grid grid-cols-2 divide-x divide-gray-200 md:grid-cols-4"
+    >
+
+
+        <div class="px-4 py-6 text-center">
+
+            <i class="fa-regular fa-clock text-wanderly-500"></i>
+
+            <p class="mt-2 text-xs font-bold uppercase tracking-wider text-gray-400">
+                Duration
+            </p>
+
+            <p
+                id="duration"
+                class="mt-1 font-semibold"
+            >
+                7 Days
+            </p>
+
+        </div>
+
+
+        <div class="px-4 py-6 text-center">
+
+            <i class="fa-solid fa-calendar-days text-wanderly-500"></i>
+
+            <p class="mt-2 text-xs font-bold uppercase tracking-wider text-gray-400">
+                Best Time
+            </p>
+
+            <p
+                id="bestTime"
+                class="mt-1 font-semibold"
+            >
+                All Year
+            </p>
+
+        </div>
+
+
+        <div class="px-4 py-6 text-center">
+
+            <i class="fa-solid fa-wallet text-wanderly-500"></i>
+
+            <p class="mt-2 text-xs font-bold uppercase tracking-wider text-gray-400">
+                Budget
+            </p>
+
+            <p
+                id="budget"
+                class="mt-1 font-semibold"
+            >
+                Mid-range
+            </p>
+
+        </div>
+
+
+        <div class="px-4 py-6 text-center">
+
+            <i class="fa-solid fa-heart text-wanderly-500"></i>
+
+            <p class="mt-2 text-xs font-bold uppercase tracking-wider text-gray-400">
+                Perfect For
+            </p>
+
+            <p
+                id="perfectFor"
+                class="mt-1 font-semibold"
+            >
+                Everyone
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==========================================
+     ABOUT DESTINATION
+========================================== -->
+
+<section class="py-24">
+
+    <div
+        class="container-wanderly grid gap-14 lg:grid-cols-[1.1fr_0.9fr] lg:items-center"
+    >
+
+
+        <div>
+
+            <span class="section-label">
+                DISCOVER THE DESTINATION
+            </span>
+
+
+            <h2
+                id="aboutTitle"
+                class="text-4xl font-bold sm:text-5xl"
+            >
+                Discover something new.
+            </h2>
+
+
+            <p
+                id="aboutText"
+                class="mt-6 leading-8 text-gray-500"
+            >
+            </p>
+
+
+            <a
+                href="index.html#plan"
+                class="primary-btn mt-8"
+            >
+
+                Plan This Trip
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+        </div>
+
+
+        <div>
+
+            <div
+                class="rounded-3xl bg-wanderly-50 p-7 sm:p-9"
+            >
+
+                <span class="section-label">
+                    HIGHLIGHTS
+                </span>
+
+
+                <ul
+                    id="highlightsList"
+                    class="mt-5 space-y-4"
+                >
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==========================================
+     THINGS TO DO
+========================================== -->
+
+<section class="bg-white py-24">
+
+    <div class="container-wanderly">
+
+
+        <div class="mb-12">
+
+            <span class="section-label">
+                EXPERIENCES
+            </span>
+
+            <h2 class="text-4xl font-bold sm:text-5xl">
+                Things to do
+            </h2>
+
+            <p class="mt-4 max-w-xl leading-7 text-gray-500">
+                Make your journey memorable with experiences
+                worth adding to your itinerary.
+            </p>
+
+        </div>
+
+
+        <div
+            id="experiencesGrid"
+            class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3"
+        >
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==========================================
+     GALLERY
+========================================== -->
+
+<section class="py-24">
+
+    <div class="container-wanderly">
+
+
+        <div class="mb-10">
+
+            <span class="section-label">
+                GET INSPIRED
+            </span>
+
+            <h2 class="text-4xl font-bold sm:text-5xl">
+                A glimpse of the journey.
+            </h2>
+
+        </div>
+
+
+        <div
+            id="galleryGrid"
+            class="grid grid-cols-2 gap-4 md:grid-cols-4"
+        >
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==========================================
+     CTA
+========================================== -->
+
+<section class="pb-24">
+
+    <div
+        class="container-wanderly overflow-hidden rounded-[2rem] bg-wanderly-900 px-6 py-16 text-center text-white sm:px-12"
+    >
+
+        <span class="section-label text-wanderly-200">
+            READY TO GO?
+        </span>
+
+
+        <h2
+            id="ctaTitle"
+            class="mx-auto max-w-3xl text-4xl font-bold sm:text-6xl"
+        >
+            Your adventure starts here.
+        </h2>
+
+
+        <p class="mx-auto mt-5 max-w-xl text-white/60">
+            Let's turn your travel ideas into an unforgettable journey.
+        </p>
+
+
+        <a
+            href="index.html#plan"
+            class="primary-btn mt-8"
+        >
+
+            Plan Your Trip
+
+            <i class="fa-solid fa-arrow-right"></i>
+
+        </a>
+
+    </div>
+
+</section>
+
+</main>
+
+
+
+<!-- ==========================================
+     FOOTER
+========================================== -->
+
+<footer class="bg-[#0d1511] py-10 text-white">
+
+    <div
+        class="container-wanderly flex flex-col justify-between gap-5 md:flex-row md:items-center"
+    >
+
+        <div>
+
+            <a
+                href="index.html"
+                class="flex items-center gap-2 font-bold"
+            >
+
+                <span
+                    class="grid h-8 w-8 place-items-center rounded-full bg-wanderly-500"
+                >
+
+                    <i class="fa-solid fa-paper-plane"></i>
+
+                </span>
+
+                Wanderly
+
+            </a>
+
+            <p class="mt-2 text-xs text-white/40">
+                Discover. Experience. Wander.
+            </p>
+
+        </div>
+
+
+        <p class="text-xs text-white/40">
+            © 2026 Wanderly. All rights reserved.
+        </p>
+
+    </div>
+
+</footer>
+
+
+
+<!-- ==========================================
+     DESTINATION JAVASCRIPT
+========================================== -->
+
+<script>
+
+document.addEventListener("DOMContentLoaded", () => {
+
+
+    /* ==========================================
+       DESTINATION DATA
+    ========================================== */
+
+    const destinations = {
+
+
+        bali: {
+
+            name: "Bali",
+
+            country: "Indonesia",
+
+            description:
+                "A tropical paradise filled with beautiful beaches, ancient temples, lush landscapes and unforgettable island experiences.",
+
+            image: "images/Bali.jpg",
+
+            duration: "7 Days",
+
+            bestTime: "Apr – Oct",
+
+            budget: "Mid-range",
+
+            perfectFor: "Couples & Families",
+
+            aboutTitle:
+                "Where island life meets adventure.",
+
+            about:
+                "Bali brings together everything a memorable holiday needs. Explore peaceful temples, discover hidden waterfalls, relax on beautiful beaches and experience the warmth of Balinese culture.",
+
+            highlights: [
+                "Beautiful beaches and tropical landscapes",
+                "Ancient temples and cultural experiences",
+                "Waterfalls, rice terraces and nature escapes",
+                "Local food and unforgettable sunsets"
+            ],
+
+            experiences: [
+                {
+                    title: "Temple Trails",
+                    icon: "fa-solid fa-place-of-worship",
+                    text: "Discover Bali's iconic temples and spiritual traditions."
+                },
+                {
+                    title: "Island Adventures",
+                    icon: "fa-solid fa-water",
+                    text: "Enjoy snorkeling, beaches and exciting water activities."
+                },
+                {
+                    title: "Nature Escapes",
+                    icon: "fa-solid fa-leaf",
+                    text: "Explore rice terraces, waterfalls and lush landscapes."
+                }
+            ],
+
+            gallery: [
+                "images/Bali.jpg",
+                "images/hero.jpg",
+                "images/adventure.jpg",
+                "images/couple.jpg"
+            ]
+
+        },
+
+
+        dubai: {
+
+            name: "Dubai",
+
+            country: "United Arab Emirates",
+
+            description:
+                "Experience futuristic skylines, luxurious escapes, desert adventures and the unique energy of one of the world's most exciting cities.",
+
+            image: "images/Dubai.jpg",
+
+            duration: "5 Days",
+
+            bestTime: "Nov – Mar",
+
+            budget: "Luxury",
+
+            perfectFor: "Families & Couples",
+
+            aboutTitle:
+                "Where the extraordinary feels ordinary.",
+
+            about:
+                "Dubai combines modern architecture, luxury shopping, desert adventures and rich Arabian culture. Whether you're looking for relaxation or excitement, there's something for every kind of traveler.",
+
+            highlights: [
+                "Iconic skyline and architectural landmarks",
+                "Desert safaris and Arabian experiences",
+                "Luxury shopping and world-class dining",
+                "Beaches, resorts and exciting attractions"
+            ],
+
+            experiences: [
+                {
+                    title: "Desert Safari",
+                    icon: "fa-solid fa-mountain-sun",
+                    text: "Experience dune drives, sunsets and traditional desert camps."
+                },
+                {
+                    title: "City Experiences",
+                    icon: "fa-solid fa-city",
+                    text: "Explore iconic landmarks and Dubai's futuristic skyline."
+                },
+                {
+                    title: "Luxury Escape",
+                    icon: "fa-solid fa-gem",
+                    text: "Enjoy world-class resorts, dining and shopping."
+                }
+            ],
+
+            gallery: [
+                "images/Dubai.jpg",
+                "images/hero.jpg",
+                "images/adventure.jpg",
+                "images/couple.jpg"
+            ]
+
+        },
+
+
+        maldives: {
+
+            name: "Maldives",
+
+            country: "Indian Ocean",
+
+            description:
+                "Escape to turquoise waters, white-sand beaches and peaceful island resorts surrounded by breathtaking natural beauty.",
+
+            image: "images/Maldives.jpg",
+
+            duration: "6 Days",
+
+            bestTime: "Nov – Apr",
+
+            budget: "Luxury",
+
+            perfectFor: "Couples",
+
+            aboutTitle:
+                "Your private slice of paradise.",
+
+            about:
+                "The Maldives is made for slowing down and enjoying the moment. Spend your days surrounded by crystal-clear waters, beautiful beaches and unforgettable island experiences.",
+
+            highlights: [
+                "Crystal-clear turquoise waters",
+                "White-sand beaches and island resorts",
+                "Snorkeling and marine-life experiences",
+                "Romantic sunsets and peaceful escapes"
+            ],
+
+            experiences: [
+                {
+                    title: "Island Escape",
+                    icon: "fa-solid fa-umbrella-beach",
+                    text: "Relax on beautiful beaches and enjoy peaceful island life."
+                },
+                {
+                    title: "Underwater World",
+                    icon: "fa-solid fa-fish",
+                    text: "Discover colorful marine life through snorkeling and diving."
+                },
+                {
+                    title: "Romantic Moments",
+                    icon: "fa-solid fa-heart",
+                    text: "Enjoy unforgettable sunsets and private island experiences."
+                }
+            ],
+
+            gallery: [
+                "images/Maldives.jpg",
+                "images/couple.jpg",
+                "images/hero.jpg",
+                "images/Bali.jpg"
+            ]
+
+        },
+
+
+        switzerland: {
+
+            name: "Switzerland",
+
+            country: "Europe",
+
+            description:
+                "Discover snow-capped mountains, peaceful alpine villages, scenic rail journeys and some of Europe's most breathtaking landscapes.",
+
+            image: "images/Switzerland.jpg",
+
+            duration: "8 Days",
+
+            bestTime: "Jun – Sep",
+
+            budget: "Premium",
+
+            perfectFor: "Families & Couples",
+
+            aboutTitle:
+                "A journey through the heart of the Alps.",
+
+            about:
+                "Switzerland is a dream destination for nature lovers and explorers. From dramatic mountain landscapes to charming villages and scenic journeys, every corner feels like a postcard.",
+
+            highlights: [
+                "Majestic Swiss Alps and mountain landscapes",
+                "Beautiful lakes and charming villages",
+                "Scenic train journeys",
+                "Winter sports and outdoor adventures"
+            ],
+
+            experiences: [
+                {
+                    title: "Mountain Adventures",
+                    icon: "fa-solid fa-mountain",
+                    text: "Experience spectacular alpine views and mountain trails."
+                },
+                {
+                    title: "Scenic Railways",
+                    icon: "fa-solid fa-train",
+                    text: "Travel through some of Europe's most beautiful landscapes."
+                },
+                {
+                    title: "Alpine Villages",
+                    icon: "fa-solid fa-house",
+                    text: "Discover charming villages surrounded by breathtaking scenery."
+                }
+            ],
+
+            gallery: [
+                "images/Switzerland.jpg",
+                "images/adventure.jpg",
+                "images/hero.jpg",
+                "images/Bali.jpg"
+            ]
+
+        }
+
+    };
+
+
+    /* ==========================================
+       GET DESTINATION
+    ========================================== */
+
+    const params =
+        new URLSearchParams(
+            window.location.search
+        );
+
+    const place =
+        (
+            params.get("place") || "bali"
+        ).toLowerCase();
+
+
+    const destination =
+        destinations[place] || destinations.bali;
+
+
+    /* ==========================================
+       PAGE TITLE
+    ========================================== */
+
+    document.title =
+        `${destination.name} | Wanderly`;
+
+
+    /* ==========================================
+       HERO
+    ========================================== */
+
+    document.getElementById(
+        "heroImage"
+    ).style.backgroundImage =
+        `url("${destination.image}")`;
+
+
+    document.getElementById(
+        "heroCountry"
+    ).textContent =
+        destination.country;
+
+
+    document.getElementById(
+        "heroTitle"
+    ).textContent =
+        destination.name;
+
+
+    document.getElementById(
+        "heroDescription"
+    ).textContent =
+        destination.description;
+
+
+    /* ==========================================
+       QUICK INFO
+    ========================================== */
+
+    document.getElementById(
+        "duration"
+    ).textContent =
+        destination.duration;
+
+
+    document.getElementById(
+        "bestTime"
+    ).textContent =
+        destination.bestTime;
+
+
+    document.getElementById(
+        "budget"
+    ).textContent =
+        destination.budget;
+
+
+    document.getElementById(
+        "perfectFor"
+    ).textContent =
+        destination.perfectFor;
+
+
+    /* ==========================================
+       ABOUT
+    ========================================== */
+
+    document.getElementById(
+        "aboutTitle"
+    ).textContent =
+        destination.aboutTitle;
+
+
+    document.getElementById(
+        "aboutText"
+    ).textContent =
+        destination.about;
+
+
+    /* ==========================================
+       HIGHLIGHTS
+    ========================================== */
+
+    const highlightsList =
+        document.getElementById(
+            "highlightsList"
+        );
+
+
+    destination.highlights.forEach(
+        highlight => {
+
+            const li =
+                document.createElement("li");
+
+            li.className =
+                "flex items-start gap-3";
+
+
+            li.innerHTML = `
+
+                <span class="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-full bg-wanderly-500 text-xs text-white">
+
+                    <i class="fa-solid fa-check"></i>
+
+                </span>
+
+                <span class="text-sm leading-6 text-gray-600">
+                    ${highlight}
+                </span>
+
+            `;
+
+
+            highlightsList.appendChild(li);
+
+        }
+    );
+
+
+    /* ==========================================
+       EXPERIENCES
+    ========================================== */
+
+    const experiencesGrid =
+        document.getElementById(
+            "experiencesGrid"
+        );
+
+
+    destination.experiences.forEach(
+        experience => {
+
+            const card =
+                document.createElement("article");
+
+            card.className =
+                "group rounded-2xl border border-gray-100 bg-[#f7faf8] p-7 transition duration-300 hover:-translate-y-2 hover:bg-white hover:shadow-card";
+
+
+            card.innerHTML = `
+
+                <div class="grid h-12 w-12 place-items-center rounded-xl bg-wanderly-100 text-lg text-wanderly-500 transition duration-300 group-hover:bg-wanderly-500 group-hover:text-white">
+
+                    <i class="${experience.icon}"></i>
+
+                </div>
+
+
+                <h3 class="mt-6 text-2xl">
+
+                    ${experience.title}
+
+                </h3>
+
+
+                <p class="mt-3 text-sm leading-7 text-gray-500">
+
+                    ${experience.text}
+
+                </p>
+
+            `;
+
+
+            experiencesGrid.appendChild(card);
+
+        }
+    );
+
+
+    /* ==========================================
+       GALLERY
+    ========================================== */
+
+    const galleryGrid =
+        document.getElementById(
+            "galleryGrid"
+        );
+
+
+    destination.gallery.forEach(
+        (image, index) => {
+
+            const wrapper =
+                document.createElement("div");
+
+            wrapper.className =
+                `group overflow-hidden rounded-2xl ${
+                    index === 0
+                        ? "col-span-2 row-span-2"
+                        : ""
+                }`;
+
+
+            wrapper.innerHTML = `
+
+                <img
+                    src="${image}"
+                    alt="${destination.name} travel"
+                    class="h-full min-h-[180px] w-full object-cover transition duration-700 group-hover:scale-105"
+                >
+
+            `;
+
+
+            galleryGrid.appendChild(wrapper);
+
+        }
+    );
+
+
+    /* ==========================================
+       MOBILE MENU
+    ========================================== */
+
+    const menuButton =
+        document.getElementById(
+            "menuButton"
+        );
+
+    const mobileMenu =
+        document.getElementById(
+            "mobileMenu"
+        );
+
+
+    menuButton.addEventListener(
+        "click",
+        () => {
+
+            mobileMenu.classList.toggle(
+                "open"
+            );
+
+
+            const isOpen =
+                mobileMenu.classList.contains(
+                    "open"
+                );
+
+
+            menuButton.innerHTML =
+                isOpen
+                    ? '<i class="fa-solid fa-xmark"></i>'
+                    : '<i class="fa-solid fa-bars"></i>';
+
+        }
+    );
+
+
+    mobileMenu
+        .querySelectorAll("a")
+        .forEach(link => {
+
+            link.addEventListener(
+                "click",
+                () => {
+
+                    mobileMenu.classList.remove(
+                        "open"
+                    );
+
+                    menuButton.innerHTML =
+                        '<i class="fa-solid fa-bars"></i>';
+
+                }
+            );
+
+        });
+
+});
+
+</script>
+
+</body>
+
+</html>

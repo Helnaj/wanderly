@@ -2,944 +2,842 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Wanderly | Discover More. Travel Further.</title>
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-    <meta name="description"
-        content="Discover amazing destinations and unforgettable travel experiences with Wanderly.">
+    <title>Wanderly | Discover Your Next Journey</title>
+
+    <meta
+        name="description"
+        content="Discover beautiful destinations, unforgettable experiences and carefully crafted travel packages with Wanderly."
+    >
 
     <!-- Google Fonts -->
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
 
     <link
         href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
-        rel="stylesheet">
+        rel="stylesheet"
+    >
 
     <!-- Font Awesome -->
+
     <link
         rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
+    <!-- Tailwind generated CSS -->
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
 </head>
 
-<body>
+
+<body class="bg-[#f7faf8] text-wanderly-900">
 
 
-    <!-- =========================
-         NAVBAR
-    ========================== -->
+<!-- ==========================================
+     NAVBAR
+========================================== -->
 
-    <header class="header" id="header">
+<header
+    id="mainHeader"
+    class="fixed left-0 top-0 z-[9999] w-full border-b border-transparent bg-transparent py-4"
+>
 
-        <div class="container nav-container">
+    <div
+        class="container-wanderly flex items-center justify-between"
+    >
 
-            <a href="#home" class="logo">
+        <!-- LOGO -->
 
-                <span class="logo-icon">
-                    <i class="fa-solid fa-paper-plane"></i>
+        <a
+            href="#home"
+            class="flex items-center gap-2 text-xl font-bold"
+        >
+
+            <span
+                class="grid h-9 w-9 place-items-center rounded-full bg-wanderly-500 text-white"
+            >
+
+                <i class="fa-solid fa-paper-plane"></i>
+
+            </span>
+
+            <span id="logoText">
+                Wanderly
+            </span>
+
+        </a>
+
+
+        <!-- DESKTOP NAV -->
+
+        <nav class="hidden items-center gap-8 md:flex">
+
+            <a
+                href="#home"
+                class="nav-link active"
+                data-section="home"
+            >
+                Home
+            </a>
+
+            <a
+                href="#destinations"
+                class="nav-link"
+                data-section="destinations"
+            >
+                Destinations
+            </a>
+
+            <a
+                href="#packages"
+                class="nav-link"
+                data-section="packages"
+            >
+                Packages
+            </a>
+
+            <a
+                href="#about"
+                class="nav-link"
+                data-section="about"
+            >
+                About
+            </a>
+
+            <a
+                href="#contact"
+                class="nav-link"
+                data-section="contact"
+            >
+                Contact
+            </a>
+
+        </nav>
+
+
+        <!-- PLAN BUTTON -->
+
+        <a
+            href="#plan"
+            class="primary-btn hidden px-5 py-2.5 md:inline-flex"
+        >
+
+            Plan Your Trip
+
+        </a>
+
+
+        <!-- MOBILE BUTTON -->
+
+        <button
+            id="menuButton"
+            type="button"
+            aria-label="Open navigation"
+            class="grid h-10 w-10 place-items-center rounded-lg border border-white/30 text-white md:hidden"
+        >
+
+            <i class="fa-solid fa-bars"></i>
+
+        </button>
+
+    </div>
+
+
+    <!-- MOBILE MENU -->
+
+    <div
+        id="mobileMenu"
+        class="mobile-menu mt-4 border-t border-gray-100 bg-white md:hidden"
+    >
+
+        <div
+            class="container-wanderly flex flex-col gap-1 py-5"
+        >
+
+            <a
+                href="#home"
+                class="rounded-lg px-4 py-3 font-semibold hover:bg-wanderly-50"
+            >
+                Home
+            </a>
+
+            <a
+                href="#destinations"
+                class="rounded-lg px-4 py-3 font-semibold hover:bg-wanderly-50"
+            >
+                Destinations
+            </a>
+
+            <a
+                href="#packages"
+                class="rounded-lg px-4 py-3 font-semibold hover:bg-wanderly-50"
+            >
+                Packages
+            </a>
+
+            <a
+                href="#about"
+                class="rounded-lg px-4 py-3 font-semibold hover:bg-wanderly-50"
+            >
+                About
+            </a>
+
+            <a
+                href="#contact"
+                class="rounded-lg px-4 py-3 font-semibold hover:bg-wanderly-50"
+            >
+                Contact
+            </a>
+
+            <a
+                href="#plan"
+                class="primary-btn mt-2"
+            >
+                Plan Your Trip
+            </a>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<!-- ==========================================
+     HERO
+========================================== -->
+
+<main>
+
+<section
+    id="home"
+    class="relative flex min-h-screen items-center overflow-hidden"
+>
+
+    <!-- BACKGROUND -->
+
+    <div
+        class="absolute inset-0 bg-cover bg-center"
+        style="background-image: url('images/hero.jpg');"
+    ></div>
+
+
+    <!-- OVERLAY -->
+
+    <div
+        class="hero-overlay absolute inset-0"
+    ></div>
+
+
+    <!-- CONTENT -->
+
+    <div
+        class="container-wanderly relative z-10 py-32"
+    >
+
+        <div class="max-w-3xl text-white">
+
+            <span
+                class="mb-5 inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-xs font-semibold tracking-[1.5px] backdrop-blur-md"
+            >
+
+                <i class="fa-solid fa-compass"></i>
+
+                EXPLORE • EXPERIENCE • ESCAPE
+
+            </span>
+
+
+            <h1
+                class="text-5xl font-bold leading-[1.05] sm:text-6xl lg:text-8xl"
+            >
+
+                Your next
+
+                <span class="text-wanderly-200">
+                    great
                 </span>
 
-                <span>Wanderly</span>
+                adventure
+
+                starts here.
+
+            </h1>
+
+
+            <p
+                class="mt-6 max-w-2xl text-base leading-7 text-white/80 sm:text-lg"
+            >
+
+                Discover breathtaking destinations, unforgettable
+                experiences and thoughtfully designed journeys made
+                for the way you love to travel.
+
+            </p>
+
+
+            <div
+                class="mt-8 flex flex-col gap-3 sm:flex-row"
+            >
+
+                <a
+                    href="#destinations"
+                    class="primary-btn"
+                >
+
+                    Explore Destinations
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+
+                <a
+                    href="#packages"
+                    class="outline-btn"
+                >
+
+                    View Packages
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==========================================
+     DESTINATIONS
+========================================== -->
+
+<section
+    id="destinations"
+    class="py-24"
+>
+
+    <div class="container-wanderly">
+
+
+        <div class="mb-12 flex flex-col justify-between gap-5 md:flex-row md:items-end">
+
+            <div>
+
+                <span class="section-label">
+                    POPULAR DESTINATIONS
+                </span>
+
+                <h2
+                    class="max-w-xl text-4xl font-bold sm:text-5xl"
+                >
+
+                    Places worth
+
+                    <span class="text-wanderly-500">
+                        getting lost in.
+                    </span>
+
+                </h2>
+
+            </div>
+
+
+            <p
+                class="max-w-md text-sm leading-6 text-gray-500"
+            >
+
+                From tropical islands to modern cities and
+                breathtaking mountain landscapes, find a destination
+                that feels like yours.
+
+            </p>
+
+        </div>
+
+
+        <div
+            class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4"
+        >
+
+
+            <!-- BALI -->
+
+            <article class="destination-card reveal">
+
+                <div class="relative h-72 overflow-hidden">
+
+                    <img
+                        src="images/Bali.jpg"
+                        alt="Bali"
+                        class="image-zoom h-full w-full object-cover"
+                    >
+
+                    <span
+                        class="absolute left-4 top-4 rounded-full bg-white/90 px-3 py-1.5 text-xs font-bold"
+                    >
+                        Indonesia
+                    </span>
+
+                </div>
+
+
+                <div class="p-5">
+
+                    <h3 class="text-2xl">
+                        Bali
+                    </h3>
+
+                    <p class="mt-2 text-sm leading-6 text-gray-500">
+                        Temples, beaches, culture and unforgettable island experiences.
+                    </p>
+
+                    <a
+                        href="destination.html?place=bali"
+                        class="text-link mt-5"
+                    >
+
+                        Explore Bali
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- DUBAI -->
+
+            <article class="destination-card reveal">
+
+                <div class="relative h-72 overflow-hidden">
+
+                    <img
+                        src="images/Dubai.jpg"
+                        alt="Dubai"
+                        class="image-zoom h-full w-full object-cover"
+                    >
+
+                    <span
+                        class="absolute left-4 top-4 rounded-full bg-white/90 px-3 py-1.5 text-xs font-bold"
+                    >
+                        UAE
+                    </span>
+
+                </div>
+
+
+                <div class="p-5">
+
+                    <h3 class="text-2xl">
+                        Dubai
+                    </h3>
+
+                    <p class="mt-2 text-sm leading-6 text-gray-500">
+                        Luxury, futuristic skylines, desert adventures and Arabian culture.
+                    </p>
+
+                    <a
+                        href="destination.html?place=dubai"
+                        class="text-link mt-5"
+                    >
+
+                        Explore Dubai
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- MALDIVES -->
+
+            <article class="destination-card reveal">
+
+                <div class="relative h-72 overflow-hidden">
+
+                    <img
+                        src="images/Maldives.jpg"
+                        alt="Maldives"
+                        class="image-zoom h-full w-full object-cover"
+                    >
+
+                    <span
+                        class="absolute left-4 top-4 rounded-full bg-white/90 px-3 py-1.5 text-xs font-bold"
+                    >
+                        Maldives
+                    </span>
+
+                </div>
+
+
+                <div class="p-5">
+
+                    <h3 class="text-2xl">
+                        Maldives
+                    </h3>
+
+                    <p class="mt-2 text-sm leading-6 text-gray-500">
+                        Crystal waters, island resorts, beaches and peaceful escapes.
+                    </p>
+
+                    <a
+                        href="destination.html?place=maldives"
+                        class="text-link mt-5"
+                    >
+
+                        Explore Maldives
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- SWITZERLAND -->
+
+            <article class="destination-card reveal">
+
+                <div class="relative h-72 overflow-hidden">
+
+                    <img
+                        src="images/Switzerland.jpg"
+                        alt="Switzerland"
+                        class="image-zoom h-full w-full object-cover"
+                    >
+
+                    <span
+                        class="absolute left-4 top-4 rounded-full bg-white/90 px-3 py-1.5 text-xs font-bold"
+                    >
+                        Europe
+                    </span>
+
+                </div>
+
+
+                <div class="p-5">
+
+                    <h3 class="text-2xl">
+                        Switzerland
+                    </h3>
+
+                    <p class="mt-2 text-sm leading-6 text-gray-500">
+                        Alpine villages, majestic mountains and unforgettable scenic journeys.
+                    </p>
+
+                    <a
+                        href="destination.html?place=switzerland"
+                        class="text-link mt-5"
+                    >
+
+                        Explore Switzerland
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==========================================
+     TRAVEL PACKAGES
+========================================== -->
+
+<section
+    id="packages"
+    class="bg-white py-24"
+>
+
+    <div class="container-wanderly">
+
+
+        <!-- SECTION HEADER -->
+
+        <div
+            class="mb-12 flex flex-col justify-between gap-6 md:flex-row md:items-end"
+        >
+
+            <div>
+
+                <span class="section-label">
+                    CURATED FOR YOU
+                </span>
+
+                <h2 class="text-4xl font-bold sm:text-5xl">
+                    Find your perfect trip.
+                </h2>
+
+                <p class="mt-4 max-w-xl leading-7 text-gray-500">
+                    Whether you're travelling with someone special,
+                    your family or on your own, we've got a journey
+                    designed for you.
+                </p>
+
+            </div>
+
+
+            <a
+                href="#packages"
+                class="hidden font-semibold text-wanderly-500 transition hover:text-wanderly-700 md:inline-flex md:items-center md:gap-2"
+            >
+
+                View all packages
+
+                <i class="fa-solid fa-arrow-right"></i>
 
             </a>
 
+        </div>
 
-            <nav class="navbar" id="navbar">
 
-                <a href="#home">Home</a>
 
-                <a href="#destinations">Destinations</a>
+        <!-- PACKAGE FILTERS -->
 
-                <a href="#packages">Packages</a>
-
-                <a href="#about">About</a>
-
-                <a href="#contact">Contact</a>
-
-                <a href="#plan" class="nav-btn">
-                    Plan Your Trip
-                </a>
-
-            </nav>
-
+        <div
+            class="mb-10 flex flex-wrap gap-3"
+            id="packageFilters"
+        >
 
             <button
-                class="menu-btn"
-                id="menuBtn"
-                aria-label="Open navigation"
-                type="button">
+                type="button"
+                class="package-filter active"
+                data-filter="all"
+            >
+                All
+            </button>
 
-                <i class="fa-solid fa-bars"></i>
+            <button
+                type="button"
+                class="package-filter"
+                data-filter="honeymoon"
+            >
+                <i class="fa-solid fa-heart mr-1"></i>
+                Honeymoon
+            </button>
 
+            <button
+                type="button"
+                class="package-filter"
+                data-filter="family"
+            >
+                <i class="fa-solid fa-people-group mr-1"></i>
+                Family Adventure
+            </button>
+
+            <button
+                type="button"
+                class="package-filter"
+                data-filter="adventure"
+            >
+                <i class="fa-solid fa-mountain-sun mr-1"></i>
+                Adventure
+            </button>
+
+            <button
+                type="button"
+                class="package-filter"
+                data-filter="luxury"
+            >
+                <i class="fa-solid fa-gem mr-1"></i>
+                Luxury
+            </button>
+
+            <button
+                type="button"
+                class="package-filter"
+                data-filter="solo"
+            >
+                <i class="fa-solid fa-person-hiking mr-1"></i>
+                Solo Explorer
             </button>
 
         </div>
 
-    </header>
 
 
-    <!-- =========================
-         MAIN
-    ========================== -->
+        <!-- PACKAGES GRID -->
 
-    <main>
+        <div
+            id="packagesGrid"
+            class="grid gap-7 md:grid-cols-2 lg:grid-cols-3"
+        >
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ==========================================
+     WHY WANDERLY
+========================================== -->
+
+<section
+    id="about"
+    class="py-24"
+>
+
+    <div
+        class="container-wanderly grid items-center gap-14 lg:grid-cols-2"
+    >
 
 
-        <!-- =========================
-             HERO
-        ========================== -->
+        <div class="reveal">
 
-        <section class="hero" id="home">
+            <span class="section-label">
+                WHY WANDERLY
+            </span>
 
-            <div class="hero-overlay"></div>
+            <h2
+                class="text-4xl font-bold sm:text-5xl"
+            >
 
-            <div class="container hero-content">
+                More than a trip.
 
-                <span class="hero-tag">
-                    <i class="fa-solid fa-location-dot"></i>
-                    Your journey starts here
+                <span class="text-wanderly-500">
+                    It's a story.
                 </span>
 
+            </h2>
 
-                <h1>
-                    Explore the World,
-                    <br>
-                    <span>Your Way</span>
-                </h1>
+            <p
+                class="mt-6 leading-7 text-gray-500"
+            >
 
+                We believe travel should feel personal.
+                That's why every Wanderly journey is designed
+                around meaningful experiences, beautiful places
+                and memories you'll want to keep.
 
-                <p>
-                    Discover breathtaking destinations, unforgettable
-                    experiences, and journeys designed around you.
-                </p>
-
-
-                <div class="hero-buttons">
-
-                    <a href="#destinations" class="btn btn-primary">
-                        Explore Destinations
-                        <i class="fa-solid fa-arrow-right"></i>
-                    </a>
-
-                    <a href="#packages" class="btn btn-outline">
-                        View Packages
-                    </a>
-
-                </div>
-
-            </div>
+            </p>
 
 
-            <div class="hero-scroll">
+            <div class="mt-8 grid gap-5 sm:grid-cols-2">
 
-                <span>Scroll to explore</span>
+                <div class="flex gap-4">
 
-                <i class="fa-solid fa-arrow-down"></i>
-
-            </div>
-
-        </section>
-
-
-        <!-- =========================
-             DESTINATIONS
-        ========================== -->
-
-        <section class="section destinations" id="destinations">
-
-            <div class="container">
-
-                <div class="section-heading">
+                    <div
+                        class="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-wanderly-100 text-wanderly-500"
+                    >
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
 
                     <div>
 
-                        <span class="section-label">
-                            EXPLORE THE WORLD
-                        </span>
-
-                        <h2>
-                            Popular <span>Destinations</span>
-                        </h2>
-
-                    </div>
-
-
-                    <p>
-                        From tropical beaches to vibrant cities,
-                        discover places that inspire your next adventure.
-                    </p>
-
-                </div>
-
-
-                <div class="destination-grid">
-
-
-                    <!-- BALI -->
-
-                    <article class="destination-card">
-
-                        <div class="card-image">
-
-                            <img
-                                src="images/Bali.jpg"
-                                alt="Bali destination">
-
-                            <span class="card-location">
-
-                                <i class="fa-solid fa-location-dot"></i>
-
-                                Indonesia
-
-                            </span>
-
-                        </div>
-
-
-                        <div class="card-content">
-
-                            <h3>Bali</h3>
-
-                            <p>
-                                Discover peaceful temples, lush rice fields,
-                                and stunning tropical beaches.
-                            </p>
-
-                            <a href="#plan" class="text-link">
-                                Explore Bali
-                                <i class="fa-solid fa-arrow-right"></i>
-                            </a>
-
-                        </div>
-
-                    </article>
-
-
-                    <!-- DUBAI -->
-
-                    <article class="destination-card">
-
-                        <div class="card-image">
-
-                            <img
-                                src="images/Dubai.jpg"
-                                alt="Dubai destination">
-
-                            <span class="card-location">
-
-                                <i class="fa-solid fa-location-dot"></i>
-
-                                UAE
-
-                            </span>
-
-                        </div>
-
-
-                        <div class="card-content">
-
-                            <h3>Dubai</h3>
-
-                            <p>
-                                Experience futuristic skylines, luxury,
-                                adventure, and Arabian culture.
-                            </p>
-
-                            <a href="#plan" class="text-link">
-                                Explore Dubai
-                                <i class="fa-solid fa-arrow-right"></i>
-                            </a>
-
-                        </div>
-
-                    </article>
-
-
-                    <!-- MALDIVES -->
-
-                    <article class="destination-card">
-
-                        <div class="card-image">
-
-                            <img
-                                src="images/Maldives.jpg"
-                                alt="Maldives destination">
-
-                            <span class="card-location">
-
-                                <i class="fa-solid fa-location-dot"></i>
-
-                                Maldives
-
-                            </span>
-
-                        </div>
-
-
-                        <div class="card-content">
-
-                            <h3>Maldives</h3>
-
-                            <p>
-                                Escape to crystal-clear waters,
-                                private beaches, and peaceful island life.
-                            </p>
-
-                            <a href="#plan" class="text-link">
-                                Explore Maldives
-                                <i class="fa-solid fa-arrow-right"></i>
-                            </a>
-
-                        </div>
-
-                    </article>
-
-
-                    <!-- SWITZERLAND -->
-
-                    <article class="destination-card">
-
-                        <div class="card-image">
-
-                            <img
-                                src="images/Switzerland.jpg"
-                                alt="Switzerland destination">
-
-                            <span class="card-location">
-
-                                <i class="fa-solid fa-location-dot"></i>
-
-                                Switzerland
-
-                            </span>
-
-                        </div>
-
-
-                        <div class="card-content">
-
-                            <h3>Switzerland</h3>
-
-                            <p>
-                                Wander through majestic mountains,
-                                charming villages, and alpine landscapes.
-                            </p>
-
-                            <a href="#plan" class="text-link">
-                                Explore Switzerland
-                                <i class="fa-solid fa-arrow-right"></i>
-                            </a>
-
-                        </div>
-
-                    </article>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- =========================
-             PACKAGES
-        ========================== -->
-
-        <section class="section packages" id="packages">
-
-            <div class="container">
-
-
-                <div class="center-heading">
-
-                    <span class="section-label">
-                        TRAVEL YOUR WAY
-                    </span>
-
-                    <h2>
-                        Trips Made <span>For You</span>
-                    </h2>
-
-                    <p>
-                        Whether you're planning a family holiday,
-                        chasing adventure, or celebrating love,
-                        find a journey made for you.
-                    </p>
-
-                </div>
-
-
-                <div class="package-grid">
-
-
-                    <!-- FAMILY ADVENTURE -->
-
-                    <article class="package-card">
-
-                        <div class="package-image">
-
-                            <img
-                                src="images/Family.jpg"
-                                alt="Family adventure tour">
-
-                            <span class="package-badge">
-                                Family
-                            </span>
-
-                        </div>
-
-
-                        <div class="package-content">
-
-                            <span class="package-category">
-                                FAMILY TRAVEL
-                            </span>
-
-                            <h3>
-                                Family Adventures
-                            </h3>
-
-
-                            <div class="package-details">
-
-                                <span>
-                                    <i class="fa-regular fa-calendar"></i>
-                                    5 Days / 4 Nights
-                                </span>
-
-                                <span>
-                                    <i class="fa-solid fa-users"></i>
-                                    4 Persons
-                                </span>
-
-                            </div>
-
-
-                            <div class="package-bottom">
-
-                                <div>
-
-                                    <small>
-                                        Starting from
-                                    </small>
-
-                                    <strong>
-                                        ₹34,999
-                                    </strong>
-
-                                </div>
-
-
-                                <a
-                                    href="#plan"
-                                    class="package-btn">
-
-                                    <i class="fa-solid fa-arrow-right"></i>
-
-                                </a>
-
-                            </div>
-
-                        </div>
-
-                    </article>
-
-
-                    <!-- ADVENTURE -->
-
-                    <article class="package-card">
-
-                        <div class="package-image">
-
-                            <img
-                                src="images/adventure.jpg"
-                                alt="Adventure tour">
-
-                            <span class="package-badge">
-                                Adventure
-                            </span>
-
-                        </div>
-
-
-                        <div class="package-content">
-
-                            <span class="package-category">
-                                ADVENTURE
-                            </span>
-
-                            <h3>
-                                Adventure Tours
-                            </h3>
-
-
-                            <div class="package-details">
-
-                                <span>
-                                    <i class="fa-regular fa-calendar"></i>
-                                    6 Days / 5 Nights
-                                </span>
-
-                                <span>
-                                    <i class="fa-solid fa-users"></i>
-                                    2 Persons
-                                </span>
-
-                            </div>
-
-
-                            <div class="package-bottom">
-
-                                <div>
-
-                                    <small>
-                                        Starting from
-                                    </small>
-
-                                    <strong>
-                                        ₹29,999
-                                    </strong>
-
-                                </div>
-
-
-                                <a
-                                    href="#plan"
-                                    class="package-btn">
-
-                                    <i class="fa-solid fa-arrow-right"></i>
-
-                                </a>
-
-                            </div>
-
-                        </div>
-
-                    </article>
-
-
-                    <!-- HONEYMOON -->
-
-                    <article class="package-card">
-
-                        <div class="package-image">
-
-                            <img
-                                src="images/couple.jpg"
-                                alt="Honeymoon couple tour">
-
-                            <span class="package-badge">
-                                Romantic
-                            </span>
-
-                        </div>
-
-
-                        <div class="package-content">
-
-                            <span class="package-category">
-                                ROMANTIC GETAWAY
-                            </span>
-
-                            <h3>
-                                Honeymoon Escapes
-                            </h3>
-
-
-                            <div class="package-details">
-
-                                <span>
-                                    <i class="fa-regular fa-calendar"></i>
-                                    5 Days / 4 Nights
-                                </span>
-
-                                <span>
-                                    <i class="fa-solid fa-users"></i>
-                                    2 Persons
-                                </span>
-
-                            </div>
-
-
-                            <div class="package-bottom">
-
-                                <div>
-
-                                    <small>
-                                        Starting from
-                                    </small>
-
-                                    <strong>
-                                        ₹44,999
-                                    </strong>
-
-                                </div>
-
-
-                                <a
-                                    href="#plan"
-                                    class="package-btn">
-
-                                    <i class="fa-solid fa-arrow-right"></i>
-
-                                </a>
-
-                            </div>
-
-                        </div>
-
-                    </article>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- =========================
-             ABOUT / WHY US
-        ========================== -->
-
-        <section class="section why-us" id="about">
-
-            <div class="container why-container">
-
-
-                <div class="why-content">
-
-                    <span class="section-label">
-                        WHY WANDERLY
-                    </span>
-
-
-                    <h2>
-                        Travel More.
-                        <br>
-                        <span>Worry Less.</span>
-                    </h2>
-
-
-                    <p>
-                        We take care of the details so you can focus
-                        on what really matters — enjoying your journey.
-                    </p>
-
-
-                    <a href="#plan" class="btn btn-primary">
-
-                        Start Your Journey
-
-                        <i class="fa-solid fa-arrow-right"></i>
-
-                    </a>
-
-                </div>
-
-
-                <div class="benefits">
-
-
-                    <div class="benefit">
-
-                        <div class="benefit-icon">
-                            <i class="fa-solid fa-tags"></i>
-                        </div>
-
-
-                        <div>
-
-                            <h3>
-                                Best Travel Deals
-                            </h3>
-
-                            <p>
-                                Get great value with carefully selected
-                                packages and competitive prices.
-                            </p>
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="benefit">
-
-                        <div class="benefit-icon">
-                            <i class="fa-solid fa-map-location-dot"></i>
-                        </div>
-
-
-                        <div>
-
-                            <h3>
-                                Handpicked Destinations
-                            </h3>
-
-                            <p>
-                                Explore destinations chosen for
-                                unforgettable experiences.
-                            </p>
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="benefit">
-
-                        <div class="benefit-icon">
-                            <i class="fa-solid fa-headset"></i>
-                        </div>
-
-
-                        <div>
-
-                            <h3>
-                                24/7 Support
-                            </h3>
-
-                            <p>
-                                Our team is here whenever you need
-                                help before or during your journey.
-                            </p>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- =========================
-             CTA
-        ========================== -->
-
-        <section class="cta-section" id="plan">
-
-            <div class="cta-overlay"></div>
-
-
-            <div class="container cta-content">
-
-                <span class="section-label light-label">
-                    YOUR NEXT ADVENTURE AWAITS
-                </span>
-
-
-                <h2>
-                    Ready for Your
-                    <br>
-                    <span>Next Adventure?</span>
-                </h2>
-
-
-                <p>
-                    Tell us where you want to go.
-                    We'll help you make it unforgettable.
-                </p>
-
-
-                <a
-                    href="#contact"
-                    class="btn btn-white">
-
-                    Plan Your Trip
-
-                    <i class="fa-solid fa-paper-plane"></i>
-
-                </a>
-
-            </div>
-
-        </section>
-
-    </main>
-
-
-    <!-- =========================
-         FOOTER
-    ========================== -->
-
-    <footer class="footer" id="contact">
-
-        <div class="container">
-
-
-            <div class="footer-grid">
-
-
-                <!-- ABOUT -->
-
-                <div class="footer-about">
-
-                    <a
-                        href="#home"
-                        class="logo footer-logo">
-
-                        <span class="logo-icon">
-
-                            <i class="fa-solid fa-paper-plane"></i>
-
-                        </span>
-
-                        <span>
-                            Wanderly
-                        </span>
-
-                    </a>
-
-
-                    <p>
-                        Making travel simpler, more inspiring,
-                        and more memorable — one journey at a time.
-                    </p>
-
-
-                    <div class="social-icons">
-
-                        <a href="#" aria-label="Instagram">
-                            <i class="fa-brands fa-instagram"></i>
-                        </a>
-
-                        <a href="#" aria-label="Facebook">
-                            <i class="fa-brands fa-facebook-f"></i>
-                        </a>
-
-                        <a href="#" aria-label="Twitter">
-                            <i class="fa-brands fa-x-twitter"></i>
-                        </a>
-
-                        <a href="#" aria-label="LinkedIn">
-                            <i class="fa-brands fa-linkedin-in"></i>
-                        </a>
+                        <h3 class="font-sans text-base font-bold">
+                            Personal journeys
+                        </h3>
+
+                        <p class="mt-1 text-sm text-gray-500">
+                            Trips designed around you.
+                        </p>
 
                     </div>
 
                 </div>
 
 
-                <!-- EXPLORE -->
+                <div class="flex gap-4">
 
-                <div class="footer-column">
+                    <div
+                        class="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-wanderly-100 text-wanderly-500"
+                    >
+                        <i class="fa-solid fa-compass"></i>
+                    </div>
 
-                    <h3>
-                        Explore
-                    </h3>
+                    <div>
 
-                    <a href="#home">
-                        Home
-                    </a>
+                        <h3 class="font-sans text-base font-bold">
+                            Local experiences
+                        </h3>
 
-                    <a href="#destinations">
-                        Destinations
-                    </a>
+                        <p class="mt-1 text-sm text-gray-500">
+                            Discover beyond the usual.
+                        </p>
 
-                    <a href="#packages">
-                        Packages
-                    </a>
-
-                    <a href="#about">
-                        About Us
-                    </a>
+                    </div>
 
                 </div>
 
 
-                <!-- QUICK LINKS -->
+                <div class="flex gap-4">
 
-                <div class="footer-column">
+                    <div
+                        class="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-wanderly-100 text-wanderly-500"
+                    >
+                        <i class="fa-solid fa-shield-heart"></i>
+                    </div>
 
-                    <h3>
-                        Quick Links
-                    </h3>
+                    <div>
 
-                    <a href="#plan">
-                        Plan Your Trip
-                    </a>
+                        <h3 class="font-sans text-base font-bold">
+                            Travel with confidence
+                        </h3>
 
-                    <a href="#packages">
-                        Travel Packages
-                    </a>
+                        <p class="mt-1 text-sm text-gray-500">
+                            Thoughtful planning every step.
+                        </p>
 
-                    <a href="#destinations">
-                        Popular Places
-                    </a>
-
-                    <a href="#contact">
-                        Contact Us
-                    </a>
+                    </div>
 
                 </div>
 
 
-                <!-- CONTACT -->
+                <div class="flex gap-4">
 
-                <div class="footer-column">
+                    <div
+                        class="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-wanderly-100 text-wanderly-500"
+                    >
+                        <i class="fa-solid fa-star"></i>
+                    </div>
 
-                    <h3>
-                        Contact
-                    </h3>
+                    <div>
 
+                        <h3 class="font-sans text-base font-bold">
+                            Memorable moments
+                        </h3>
 
-                    <a href="mailto:hello@wanderly.com">
+                        <p class="mt-1 text-sm text-gray-500">
+                            Stories worth remembering.
+                        </p>
 
-                        <i class="fa-regular fa-envelope"></i>
-
-                        hello@wanderly.com
-
-                    </a>
-
-
-                    <a href="tel:+919876543210">
-
-                        <i class="fa-solid fa-phone"></i>
-
-                        +91 98765 43210
-
-                    </a>
-
-
-                    <span>
-
-                        <i class="fa-solid fa-location-dot"></i>
-
-                        Kochi, Kerala, India
-
-                    </span>
-
-                </div>
-
-            </div>
-
-
-            <!-- FOOTER BOTTOM -->
-
-            <div class="footer-bottom">
-
-                <p>
-                    © 2026 Wanderly. All rights reserved.
-                </p>
-
-
-                <div>
-
-                    <a href="#">
-                        Privacy Policy
-                    </a>
-
-                    <a href="#">
-                        Terms & Conditions
-                    </a>
+                    </div>
 
                 </div>
 
@@ -947,12 +845,588 @@
 
         </div>
 
-    </footer>
+
+        <div class="relative reveal">
+
+            <div
+                class="absolute -right-5 -top-5 h-32 w-32 rounded-full bg-wanderly-100"
+            ></div>
+
+            <img
+                src="images/hero.jpg"
+                alt="Travel experience"
+                class="relative h-[500px] w-full rounded-[2rem] object-cover shadow-2xl"
+            >
+
+        </div>
+
+    </div>
+
+</section>
 
 
-    <!-- JAVASCRIPT -->
+<!-- ==========================================
+     PLAN YOUR TRIP
+========================================== -->
 
-    <script src="script.js"></script>
+<section
+    id="plan"
+    class="bg-[#f7faf8] py-24"
+>
+
+    <div class="container-wanderly">
+
+        <!-- SECTION HEADER -->
+
+        <div class="mx-auto mb-12 max-w-2xl text-center">
+
+            <span class="section-label">
+                START YOUR JOURNEY
+            </span>
+
+            <h2 class="text-4xl font-bold sm:text-5xl">
+                Let's plan your perfect trip.
+            </h2>
+
+            <p class="mt-5 leading-7 text-gray-500">
+                Tell us a little about your travel plans and
+                we'll help you create a journey you'll remember.
+            </p>
+
+        </div>
+
+
+        <!-- FORM CARD -->
+
+        <div
+            class="mx-auto max-w-5xl rounded-[2rem] bg-white p-6 shadow-card sm:p-10 lg:p-12"
+        >
+
+            <form
+                id="tripForm"
+                novalidate
+            >
+
+                <!-- ==========================================
+                     DESTINATION + TRAVEL TYPE
+                =========================================== -->
+
+                <div class="grid gap-6 md:grid-cols-2">
+
+
+                    <!-- DESTINATION -->
+
+                    <div class="form-group">
+
+                        <label
+                            for="destination"
+                            class="form-label"
+                        >
+                            Where do you want to go?
+                        </label>
+
+                        <div class="input-wrapper">
+
+                            <i class="fa-solid fa-location-dot"></i>
+
+                            <select
+                                id="destination"
+                                name="destination"
+                                class="form-input"
+                                required
+                            >
+
+                                <option value="">
+                                    Select a destination
+                                </option>
+
+                                <option value="Bali">
+                                    Bali
+                                </option>
+
+                                <option value="Dubai">
+                                    Dubai
+                                </option>
+
+                                <option value="Maldives">
+                                    Maldives
+                                </option>
+
+                                <option value="Switzerland">
+                                    Switzerland
+                                </option>
+
+                                <option value="Other">
+                                    Other
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                        <p
+                            class="form-error"
+                            id="destinationError"
+                        ></p>
+
+                    </div>
+
+
+
+                    <!-- TRAVEL TYPE -->
+
+                    <div class="form-group">
+
+                        <label
+                            for="travelType"
+                            class="form-label"
+                        >
+                            What kind of trip?
+                        </label>
+
+                        <div class="input-wrapper">
+
+                            <i class="fa-solid fa-suitcase-rolling"></i>
+
+                            <select
+                                id="travelType"
+                                name="travel_type"
+                                class="form-input"
+                                required
+                            >
+
+                                <option value="">
+                                    Select trip type
+                                </option>
+
+                                <option value="Honeymoon">
+                                    Honeymoon
+                                </option>
+
+                                <option value="Family Adventure">
+                                    Family Adventure
+                                </option>
+
+                                <option value="Adventure">
+                                    Adventure
+                                </option>
+
+                                <option value="Luxury Escape">
+                                    Luxury Escape
+                                </option>
+
+                                <option value="Solo Explorer">
+                                    Solo Explorer
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                        <p
+                            class="form-error"
+                            id="travelTypeError"
+                        ></p>
+
+                    </div>
+
+
+
+                    <!-- ==========================================
+                         TRAVELLERS
+                    =========================================== -->
+
+                    <div class="form-group">
+
+                        <label
+                            for="travellers"
+                            class="form-label"
+                        >
+                            Number of travellers
+                        </label>
+
+                        <div class="input-wrapper">
+
+                            <i class="fa-solid fa-users"></i>
+
+                            <input
+                                type="number"
+                                id="travellers"
+                                name="travellers"
+                                class="form-input"
+                                placeholder="e.g. 2"
+                                min="1"
+                                max="30"
+                                required
+                            >
+
+                        </div>
+
+                        <p
+                            class="form-error"
+                            id="travellersError"
+                        ></p>
+
+                    </div>
+
+
+
+                    <!-- ==========================================
+                         TRAVEL DATE
+                    =========================================== -->
+
+                    <div class="form-group">
+
+                        <label
+                            for="travelDate"
+                            class="form-label"
+                        >
+                            Preferred travel date
+                        </label>
+
+                        <div class="input-wrapper">
+
+                            <i class="fa-regular fa-calendar"></i>
+
+                            <input
+                                type="date"
+                                id="travelDate"
+                                name="travel_date"
+                                class="form-input"
+                                required
+                            >
+
+                        </div>
+
+                        <p
+                            class="form-error"
+                            id="travelDateError"
+                        ></p>
+
+                    </div>
+
+
+
+                    <!-- ==========================================
+                         BUDGET
+                    =========================================== -->
+
+                    <div class="form-group">
+
+                        <label
+                            for="budget"
+                            class="form-label"
+                        >
+                            Estimated budget
+                        </label>
+
+                        <div class="input-wrapper">
+
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+
+                            <select
+                                id="budget"
+                                name="budget"
+                                class="form-input"
+                                required
+                            >
+
+                                <option value="">
+                                    Select your budget
+                                </option>
+
+                                <option value="Under ₹50,000">
+                                    Under ₹50,000
+                                </option>
+
+                                <option value="₹50,000 – ₹1,00,000">
+                                    ₹50,000 – ₹1,00,000
+                                </option>
+
+                                <option value="₹1,00,000 – ₹2,00,000">
+                                    ₹1,00,000 – ₹2,00,000
+                                </option>
+
+                                <option value="₹2,00,000+">
+                                    ₹2,00,000+
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                        <p
+                            class="form-error"
+                            id="budgetError"
+                        ></p>
+
+                    </div>
+
+
+
+                    <!-- ==========================================
+                         EMAIL
+                    =========================================== -->
+
+                    <div class="form-group">
+
+                        <label
+                            for="email"
+                            class="form-label"
+                        >
+                            Your email
+                        </label>
+
+                        <div class="input-wrapper">
+
+                            <i class="fa-regular fa-envelope"></i>
+
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                class="form-input"
+                                placeholder="you@example.com"
+                                required
+                            >
+
+                        </div>
+
+                        <p
+                            class="form-error"
+                            id="emailError"
+                        ></p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ==========================================
+                     SPECIAL REQUESTS
+                =========================================== -->
+
+                <div class="form-group mt-6">
+
+                    <label
+                        for="message"
+                        class="form-label"
+                    >
+                        Tell us about your trip
+                    </label>
+
+                    <div class="input-wrapper textarea-wrapper">
+
+                        <i class="fa-regular fa-comment-dots"></i>
+
+                        <textarea
+                            id="message"
+                            name="message"
+                            class="form-input"
+                            rows="5"
+                            placeholder="Tell us about your preferences, places you'd like to visit, special occasions, etc."
+                        ></textarea>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ==========================================
+                     SUBMIT
+                =========================================== -->
+
+                <div
+                    class="mt-8 flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between"
+                >
+
+                    <p class="max-w-md text-xs leading-5 text-gray-400">
+
+                        By submitting this form, you're asking
+                        our travel team to help create a personalized
+                        travel plan for you.
+
+                    </p>
+
+
+                    <button
+                        type="submit"
+                        id="tripSubmit"
+                        class="primary-btn shrink-0"
+                    >
+
+                        <span>
+                            Start Planning
+                        </span>
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </button>
+
+                </div>
+
+            </form>
+
+
+
+            <!-- ==========================================
+                 SUCCESS MESSAGE
+            =========================================== -->
+
+            <div
+                id="tripSuccess"
+                class="hidden rounded-2xl bg-wanderly-50 p-8 text-center"
+            >
+
+                <div
+                    class="mx-auto grid h-16 w-16 place-items-center rounded-full bg-wanderly-500 text-2xl text-white"
+                >
+
+                    <i class="fa-solid fa-check"></i>
+
+                </div>
+
+
+                <h3 class="mt-6 text-3xl font-bold">
+                    Your trip request is on its way!
+                </h3>
+
+
+                <p class="mx-auto mt-3 max-w-lg leading-7 text-gray-500">
+
+                    Thanks for choosing Wanderly.
+                    Our travel team will review your preferences
+                    and get back to you soon.
+
+                </p>
+
+
+                <button
+                    type="button"
+                    id="planAnother"
+                    class="secondary-btn mt-7"
+                >
+
+                    Plan another trip
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- ==========================================
+     CONTACT / CTA
+========================================== -->
+
+<section
+    id="contact"
+    class="py-24"
+>
+
+    <div
+        class="container-wanderly overflow-hidden rounded-[2rem] bg-wanderly-900 px-6 py-16 text-center text-white sm:px-12"
+    >
+
+        <span class="section-label text-wanderly-200">
+            START EXPLORING
+        </span>
+
+        <h2 class="mx-auto max-w-3xl text-4xl font-bold sm:text-6xl">
+
+            The world is waiting.
+
+        </h2>
+
+        <p
+            class="mx-auto mt-5 max-w-xl leading-7 text-white/60"
+        >
+
+            Your next unforgettable story could be closer
+            than you think.
+
+        </p>
+
+        <a
+            href="#plan"
+            class="primary-btn mt-8"
+        >
+
+            Plan Your Trip
+
+            <i class="fa-solid fa-arrow-right"></i>
+
+        </a>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<!-- ==========================================
+     FOOTER
+========================================== -->
+
+<footer
+    class="bg-[#0d1511] py-10 text-white"
+>
+
+    <div
+        class="container-wanderly flex flex-col justify-between gap-5 md:flex-row md:items-center"
+    >
+
+        <div>
+
+            <div class="flex items-center gap-2 font-bold">
+
+                <span
+                    class="grid h-8 w-8 place-items-center rounded-full bg-wanderly-500"
+                >
+                    <i class="fa-solid fa-paper-plane"></i>
+                </span>
+
+                Wanderly
+
+            </div>
+
+            <p class="mt-2 text-xs text-white/40">
+                Discover. Experience. Wander.
+            </p>
+
+        </div>
+
+
+        <p class="text-xs text-white/40">
+            © 2026 Wanderly. All rights reserved.
+        </p>
+
+    </div>
+
+</footer>
+
+
+<!-- ==========================================
+     JAVASCRIPT
+========================================== -->
+
+<script src="script.js"></script>
+<script
+    type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+
+<script>
+    emailjs.init({
+        publicKey: "HXFb2gOL-0Kh5c41u"
+    });
+</script>
 
 </body>
 

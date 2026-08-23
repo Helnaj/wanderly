@@ -1,0 +1,411 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* ================================
+   GLOBAL
+================================ */
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    font-family: "DM Sans", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: "Playfair Display", serif;
+}
+
+::selection {
+    background: #208b67;
+    color: white;
+}
+
+
+/* ================================
+   COMPONENTS
+================================ */
+
+@layer components {
+
+    .container-wanderly {
+        @apply mx-auto w-[90%] max-w-[1200px];
+    }
+
+    .section-label {
+        @apply mb-3 inline-block text-xs font-bold tracking-[2px] text-wanderly-500;
+    }
+
+    .primary-btn {
+        @apply inline-flex items-center justify-center gap-2 rounded-full bg-wanderly-500 px-6 py-3.5 font-semibold text-white transition duration-300 hover:-translate-y-1 hover:bg-wanderly-600;
+    }
+
+    .outline-btn {
+        @apply inline-flex items-center justify-center gap-2 rounded-full border border-white/60 px-6 py-3.5 font-semibold text-white transition duration-300 hover:bg-white hover:text-wanderly-900;
+    }
+
+    .text-link {
+        @apply inline-flex items-center gap-2 font-semibold text-wanderly-500 transition duration-300 hover:gap-3 hover:text-wanderly-600;
+    }
+
+    .destination-card {
+        @apply overflow-hidden rounded-2xl bg-white shadow-card transition duration-300 hover:-translate-y-2 hover:shadow-xl;
+    }
+
+    .package-card {
+        @apply overflow-hidden rounded-2xl bg-white shadow-card transition duration-300 hover:-translate-y-2 hover:shadow-xl;
+    }
+
+    .nav-link {
+        @apply relative py-2 text-sm font-semibold text-wanderly-900 transition duration-300 hover:text-wanderly-500;
+    }
+
+    .nav-link.active {
+        @apply text-wanderly-500;
+    }
+
+    .nav-link.active::after {
+        content: "";
+        @apply absolute -bottom-1 left-0 h-[2px] w-full rounded-full bg-wanderly-500;
+    }
+}
+
+
+/* ================================
+   NAVBAR
+================================ */
+
+#mainHeader {
+    transition:
+        background-color 0.3s ease,
+        box-shadow 0.3s ease,
+        padding 0.3s ease;
+}
+
+#mainHeader.scrolled {
+    background: rgba(255, 255, 255, 0.96);
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+    backdrop-filter: blur(12px);
+}
+
+#mainHeader.scrolled .nav-link {
+    color: #17221c;
+}
+
+#mainHeader.scrolled .nav-link:hover,
+#mainHeader.scrolled .nav-link.active {
+    color: #208b67;
+}
+
+
+/* ================================
+   MOBILE MENU
+================================ */
+
+.mobile-menu {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition:
+        max-height 0.35s ease,
+        opacity 0.25s ease;
+}
+
+.mobile-menu.open {
+    max-height: 400px;
+    opacity: 1;
+}
+
+
+/* ================================
+   HERO
+================================ */
+
+.hero-overlay {
+    background:
+        linear-gradient(
+            90deg,
+            rgba(8, 25, 17, 0.78) 0%,
+            rgba(8, 25, 17, 0.45) 45%,
+            rgba(8, 25, 17, 0.15) 100%
+        );
+}
+
+
+/* ================================
+   IMAGE HOVER
+================================ */
+
+.image-zoom {
+    transition: transform 0.6s ease;
+}
+
+.destination-card:hover .image-zoom,
+.package-card:hover .image-zoom {
+    transform: scale(1.06);
+}
+
+
+/* ================================
+   SCROLL REVEAL
+================================ */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(25px);
+    transition:
+        opacity 0.7s ease,
+        transform 0.7s ease;
+}
+
+.reveal.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* ================================
+   FORM
+================================ */
+
+.form-input {
+    @apply w-full rounded-xl border border-gray-200 bg-white px-4 py-3 outline-none transition focus:border-wanderly-500 focus:ring-2 focus:ring-wanderly-100;
+}
+
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 768px) {
+
+    .hero-overlay {
+        background:
+            linear-gradient(
+                180deg,
+                rgba(8, 25, 17, 0.45),
+                rgba(8, 25, 17, 0.8)
+            );
+    }
+
+}
+
+
+/* ==========================================
+   PACKAGE SECTION
+========================================== */
+
+.package-filter {
+    border: 1px solid #e5e7eb;
+    border-radius: 999px;
+    padding: 10px 18px;
+    background: white;
+    color: #6b7280;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.package-filter:hover {
+    border-color: #3cb371;
+    color: #3cb371;
+}
+
+.package-filter.active {
+    background: #3cb371;
+    border-color: #3cb371;
+    color: white;
+}
+
+
+/* Package Card */
+
+.package-card {
+    overflow: hidden;
+    border: 1px solid #edf0ee;
+    border-radius: 24px;
+    background: white;
+    transition: all 0.35s ease;
+}
+
+.package-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 50px rgba(23, 34, 28, 0.10);
+}
+
+
+/* Package Image */
+
+.package-image-wrapper {
+    position: relative;
+    height: 250px;
+    overflow: hidden;
+}
+
+.package-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.7s ease;
+}
+
+.package-card:hover .package-image {
+    transform: scale(1.07);
+}
+
+
+/* Package Badge */
+
+.package-badge {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    padding: 7px 12px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.94);
+    color: #17221c;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+}
+
+
+/* Package Price */
+
+.package-price {
+    color: #3cb371;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+
+/* Package Details */
+
+.package-detail {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    color: #6b7280;
+    font-size: 13px;
+}
+
+/* ==========================================
+   PLAN YOUR TRIP FORM
+========================================== */
+
+.form-group {
+    width: 100%;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 9px;
+    color: #17221c;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.input-wrapper {
+    position: relative;
+}
+
+.input-wrapper > i {
+    position: absolute;
+    left: 17px;
+    top: 50%;
+    z-index: 2;
+    transform: translateY(-50%);
+    color: #3cb371;
+    pointer-events: none;
+}
+
+.textarea-wrapper > i {
+    top: 22px;
+    transform: none;
+}
+
+.form-input {
+    width: 100%;
+    min-height: 52px;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    background: white;
+    padding: 0 17px 0 47px;
+    color: #17221c;
+    font-family: inherit;
+    font-size: 14px;
+    outline: none;
+    transition: all 0.25s ease;
+}
+
+textarea.form-input {
+    height: auto;
+    min-height: 130px;
+    padding-top: 15px;
+    resize: vertical;
+}
+
+.form-input::placeholder {
+    color: #9ca3af;
+}
+
+.form-input:hover {
+    border-color: #cbd5cf;
+}
+
+.form-input:focus {
+    border-color: #3cb371;
+    box-shadow: 0 0 0 4px rgba(60, 179, 113, 0.10);
+}
+
+.form-input.error {
+    border-color: #ef4444;
+}
+
+.form-error {
+    min-height: 18px;
+    margin-top: 5px;
+    color: #ef4444;
+    font-size: 12px;
+}
+
+.secondary-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    border: 1px solid #dfe6e1;
+    border-radius: 999px;
+    background: white;
+    padding: 11px 20px;
+    color: #17221c;
+    font-size: 14px;
+    font-weight: 700;
+    transition: all 0.25s ease;
+}
+
+.secondary-btn:hover {
+    border-color: #3cb371;
+    color: #3cb371;
+}
+
+
+/* ==========================================
+   FORM MOBILE
+========================================== */
+
+@media (max-width: 640px) {
+
+    .form-input {
+        font-size: 16px;
+    }
+
+}
