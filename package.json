@@ -1,7 +1,7 @@
 {
   "scripts": {
     "dev": "tailwindcss -i ./src/input.css -o ./style.css --watch",
-    "build": "tailwindcss -i ./src/input.css -o ./style.css --minify"
+    "build": "node ./node_modules/tailwindcss/lib/cli.js -i ./src/input.css -o ./style.css --minify"
   },
   "devDependencies": {
     "tailwindcss": "^3.4.17"
