@@ -409,3 +409,169 @@ textarea.form-input {
     }
 
 }
+
+/* ==========================================
+   TRAVELER STORIES
+========================================== */
+
+.story-card {
+    @apply rounded-3xl border border-gray-100 bg-white p-8
+           transition-all duration-300;
+}
+
+.story-card:hover {
+    @apply -translate-y-2 shadow-xl;
+}
+
+.story-stars {
+    @apply flex gap-1 text-sm text-wanderly-500;
+}
+
+.story-text {
+    @apply mt-6 text-[15px] leading-7 text-gray-600;
+}
+
+.story-person {
+    @apply mt-8 flex items-center gap-4;
+}
+
+.story-avatar {
+    @apply flex h-12 w-12 items-center justify-center
+           rounded-full bg-wanderly-100
+           font-semibold text-wanderly-500;
+}
+
+.story-name {
+    @apply font-semibold text-wanderly-900;
+}
+
+.story-trip {
+    @apply mt-1 text-sm text-gray-500;
+}
+
+/* ==========================================
+   WHY CHOOSE WANDERLY
+========================================== */
+
+.why-card {
+    @apply rounded-3xl border border-gray-100 bg-white p-7
+           transition-all duration-300;
+}
+
+.why-card:hover {
+    @apply -translate-y-2 shadow-xl;
+}
+
+.why-icon {
+    @apply flex h-14 w-14 items-center justify-center
+           rounded-2xl bg-wanderly-100
+           text-xl text-wanderly-500
+           transition-all duration-300;
+}
+
+.why-card:hover .why-icon {
+    @apply bg-wanderly-500 text-white;
+}
+
+.why-title {
+    @apply mt-6 text-xl font-semibold text-wanderly-900;
+}
+
+.why-text {
+    @apply mt-3 leading-7 text-gray-600;
+}
+
+
+/* ==========================================
+   WHY WANDERLY HIGHLIGHTS
+========================================== */
+
+.highlight-item {
+    @apply flex flex-col items-center;
+}
+
+.highlight-icon {
+    @apply flex h-12 w-12 items-center justify-center
+           rounded-full bg-white
+           text-lg text-wanderly-500
+           shadow-sm;
+}
+
+.highlight-title {
+    @apply mt-4 text-2xl font-semibold text-wanderly-900;
+}
+
+.highlight-text {
+    @apply mt-2 max-w-xs leading-6 text-gray-600;
+}
+
+
+/* ==========================================
+   TRAVELER STORIES
+========================================== */
+
+.story-card {
+    @apply rounded-3xl border border-gray-100 bg-white p-8
+           transition-all duration-300;
+}
+
+.story-card:hover {
+    @apply -translate-y-2 shadow-xl;
+}
+
+.story-stars {
+    @apply flex gap-1 text-sm text-wanderly-500;
+}
+
+.story-text {
+    @apply mt-6 text-[15px] leading-7 text-gray-600;
+}
+
+.story-person {
+    @apply mt-8 flex items-center gap-4;
+}
+
+.story-avatar {
+    @apply flex h-12 w-12 items-center justify-center
+           rounded-full bg-wanderly-100
+           font-semibold text-wanderly-500;
+}
+
+.story-name {
+    @apply font-semibold text-wanderly-900;
+}
+
+.story-trip {
+    @apply mt-1 text-sm text-gray-500;
+}
+
+
+/* ==========================================
+   FOOTER
+========================================== */
+
+.footer-heading {
+    @apply mb-6 text-lg font-semibold;
+}
+
+.footer-link {
+    @apply text-gray-300 transition-all duration-300;
+}
+
+.footer-link:hover {
+    @apply text-wanderly-500;
+}
+
+.footer-social {
+    @apply flex h-10 w-10 items-center justify-center
+           rounded-full border border-white/10
+           text-gray-300
+           transition-all duration-300;
+}
+
+.footer-social:hover {
+    @apply -translate-y-1
+           border-wanderly-500
+           bg-wanderly-500
+           text-wanderly-900;
+}
