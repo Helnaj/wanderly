@@ -430,16 +430,16 @@
      ABOUT DESTINATION
 ========================================== -->
 
-<section class="relative overflow-hidden py-24 md:py-32">
+<section class="py-24">
 
-    <!-- Decorative Background -->
-    <div class="absolute -left-32 top-20 h-72 w-72 rounded-full bg-wanderly-100/60 blur-3xl"></div>
+    <div
+        class="container-wanderly grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-stretch"
+    >
 
-    <div class="container-wanderly relative z-10 grid gap-14 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
 
+        <!-- ABOUT CONTENT -->
 
-        <!-- About Content -->
-        <div>
+        <div class="flex flex-col justify-center">
 
             <span class="section-label">
                 DISCOVER THE DESTINATION
@@ -448,33 +448,38 @@
 
             <h2
                 id="aboutTitle"
-                class="max-w-xl text-4xl font-bold leading-tight text-wanderly-900 sm:text-5xl lg:text-6xl"
+                class="text-4xl font-bold sm:text-5xl"
             >
                 Discover something new.
             </h2>
 
 
-            <div class="mt-7 h-1 w-16 rounded-full bg-wanderly-500"></div>
-
-
             <p
                 id="aboutText"
-                class="mt-7 max-w-xl text-base leading-8 text-gray-500 sm:text-lg"
+                class="mt-6 max-w-xl leading-8 text-gray-500"
             >
             </p>
 
 
-            <!-- Extra Trust Points -->
-            <div class="mt-8 flex flex-wrap gap-5 text-sm font-semibold text-wanderly-900">
+            <!-- Small Benefits -->
 
-                <span class="inline-flex items-center gap-2">
+            <div class="mt-8 flex flex-wrap gap-x-8 gap-y-3 text-sm font-semibold text-wanderly-900">
+
+                <span class="flex items-center gap-2">
+
                     <i class="fa-solid fa-circle-check text-wanderly-500"></i>
+
                     Curated experiences
+
                 </span>
 
-                <span class="inline-flex items-center gap-2">
+
+                <span class="flex items-center gap-2">
+
                     <i class="fa-solid fa-circle-check text-wanderly-500"></i>
+
                     Flexible planning
+
                 </span>
 
             </div>
@@ -482,7 +487,7 @@
 
             <a
                 href="index.html#plan"
-                class="primary-btn mt-9"
+                class="primary-btn mt-10 w-fit"
             >
 
                 Plan This Trip
@@ -494,65 +499,80 @@
         </div>
 
 
-        <!-- Highlights Card -->
-        <div class="relative">
+        <!-- HIGHLIGHTS CARD -->
 
-
-            <!-- Background Accent -->
-            <div class="absolute -right-4 -top-4 h-full w-full rounded-3xl border border-wanderly-100"></div>
-
+        <div>
 
             <div
-                class="relative rounded-3xl border border-wanderly-100 bg-white p-8 shadow-xl shadow-wanderly-900/5 sm:p-10"
+                class="relative h-full overflow-hidden rounded-3xl bg-wanderly-50 p-8 sm:p-10"
             >
 
-                <div class="flex items-center justify-between gap-4">
 
-                    <div>
+                <!-- Decorative shapes -->
 
-                        <span class="section-label mb-2">
-                            HIGHLIGHTS
-                        </span>
-
-                        <h3 class="text-2xl font-bold text-wanderly-900">
-                            Why you'll love it
-                        </h3>
-
-                    </div>
+                <div
+                    class="absolute -right-12 -top-12 h-40 w-40 rounded-full bg-wanderly-100"
+                ></div>
 
 
-                    <div class="grid h-12 w-12 place-items-center rounded-2xl bg-wanderly-100 text-wanderly-500">
+                <div
+                    class="absolute bottom-0 right-0 h-28 w-28 rounded-tl-full bg-wanderly-200/40"
+                ></div>
 
-                        <i class="fa-solid fa-sparkles text-lg"></i>
 
-                    </div>
+                <!-- Large decorative icon -->
+
+                <div
+                    class="absolute right-10 top-1/2 hidden h-24 w-24 -translate-y-1/2 place-items-center rounded-full border border-wanderly-200 bg-white/70 text-4xl text-wanderly-500 lg:grid"
+                >
+
+                    <i class="fa-solid fa-location-dot"></i>
 
                 </div>
 
 
-                <ul
-                    id="highlightsList"
-                    class="mt-8 space-y-3"
-                >
-                </ul>
+                <!-- Card Content -->
+
+                <div class="relative z-10 max-w-md">
+
+                    <span class="section-label">
+                        HIGHLIGHTS
+                    </span>
 
 
-                <!-- Bottom Detail -->
-                <div class="mt-8 border-t border-gray-100 pt-6">
+                    <h3 class="mt-2 text-3xl font-bold text-wanderly-900">
+                        Why you'll love it
+                    </h3>
 
-                    <p class="flex items-center gap-2 text-sm text-gray-400">
 
-                        <i class="fa-solid fa-wand-magic-sparkles text-wanderly-500"></i>
+                    <ul
+                        id="highlightsList"
+                        class="mt-7 space-y-4"
+                    >
+                    </ul>
+
+
+                    <!-- Bottom Message -->
+
+                    <div
+                        class="mt-8 border-t border-wanderly-200/70 pt-5 text-sm leading-6 text-gray-500"
+                    >
+
+                        <i
+                            class="fa-solid fa-wand-magic-sparkles mr-2 text-wanderly-500"
+                        ></i>
 
                         Handpicked experiences for unforgettable memories.
 
-                    </p>
+                    </div>
 
                 </div>
+
 
             </div>
 
         </div>
+
 
     </div>
 
